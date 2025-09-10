@@ -525,6 +525,8 @@ pub fn default_key_bindings() -> Vec<KeyBinding> {
         ArrowDown,                          +BindingMode::SEARCH; SearchAction::SearchHistoryNext;
         Enter,                              +BindingMode::SEARCH, ~BindingMode::VI; SearchAction::SearchFocusNext;
         Enter, ModifiersState::SHIFT,       +BindingMode::SEARCH, ~BindingMode::VI; SearchAction::SearchFocusPrevious;
+        //Custom
+        "n" ,  ModifiersState::CONTROL|ModifiersState::SHIFT,~BindingMode::SEARCH ; Action::CreateNewWindow;
     );
 
     bindings.extend(platform_key_bindings());
