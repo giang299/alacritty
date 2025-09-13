@@ -107,7 +107,7 @@ impl Default for FontDescription {
             #[cfg(target_os = "macos")]
             family: "Menlo".into(),
             #[cfg(windows)]
-            family: "Consolas".into(),
+            family: "JetBrainsMono Nerd Font".into(),
             style: None,
         }
     }
@@ -134,7 +134,7 @@ struct Size(FontSize);
 
 impl Default for Size {
     fn default() -> Self {
-        Self(FontSize::new(11.25))
+        Self(FontSize::new(16.0))
     }
 }
 
