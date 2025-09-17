@@ -400,7 +400,7 @@ pub fn installed_config(suffix: &str) -> Option<PathBuf> {
 #[cfg(windows)]
 pub fn installed_config(suffix: &str) -> Option<PathBuf> {
     let file_name = format!("alacritty.{suffix}");
-    dirs::config_dir().map(|path| path.join("alacritty").join(file_name)).filter(|new| new.exists())
+    dirs::home_dir().map(|path| path.join(".config/alacritty").join(file_name)).filter(|new| new.exists())
 }
 
 #[cfg(test)]
